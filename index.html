@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Queries</title>
-    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="Estilos/style.css">
+    <link rel="stylesheet" href="Estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu site</h1>
         <span  id="burger" class="material-symbols-outlined" onclick="clickMenu()">
@@ -35,6 +35,7 @@
             </p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente debitis aperiam assumenda fugiat numquam odit inventore mollitia ipsam provident quis facilis blanditiis, repudiandae quod nisi quaerat dolor accusantium cumque recusandae.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae facilis saepe repellat fuga similique omnis excepturi accusamus ipsam sit error! Dolor, animi sit sapiente reiciendis dignissimos laudantium eius ipsa optio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos similique quidem dolorem quasi, recusandae illo sapiente sint rem? Eos praesentium alias impedit sunt quam similique sed dolorem sequi in eaque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor architecto temporibus quod tempore perferendis, nostrum odio! Eveniet numquam eum ut, accusamus cupiditate architecto in sapiente repellat distinctio repellendus inventore id.
             </p>
         </article>
     </main>
@@ -44,6 +45,13 @@
                 itens.style.display = "none"
             } else {
                 itens.style.display = "block"
+            }
+        }
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = "block"
+            } else {
+                itens.style.display = "none"
             }
         }
     </script>
